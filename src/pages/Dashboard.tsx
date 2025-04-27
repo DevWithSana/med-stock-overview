@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { StatCard } from "@/components/StatCard";
 import { ChartContainer } from "@/components/ChartContainer";
@@ -31,6 +30,7 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const salesData = [
   { name: "Lun", revenue: 4000, count: 24 },
@@ -297,21 +297,21 @@ const Dashboard = () => {
                   <div className="text-sm font-medium">Ce mois-ci</div>
                   <div className="text-sm text-pharma-danger font-medium">12 produits</div>
                 </div>
-                <Progress value={75} className="h-2 bg-pharma-gray" indicatorClassName="bg-pharma-danger" />
+                <Progress value={75} className="h-2 bg-pharma-gray" />
               </div>
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <div className="text-sm font-medium">Mois prochain</div>
                   <div className="text-sm text-pharma-warning font-medium">24 produits</div>
                 </div>
-                <Progress value={40} className="h-2 bg-pharma-gray" indicatorClassName="bg-pharma-warning" />
+                <Progress value={40} className="h-2 bg-pharma-gray" />
               </div>
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <div className="text-sm font-medium">Dans 3 mois</div>
                   <div className="text-sm text-pharma-secondary font-medium">38 produits</div>
                 </div>
-                <Progress value={15} className="h-2 bg-pharma-gray" indicatorClassName="bg-pharma-secondary" />
+                <Progress value={15} className="h-2 bg-pharma-gray" />
               </div>
             </div>
           </CardContent>

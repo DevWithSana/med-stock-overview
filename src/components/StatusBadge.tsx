@@ -2,7 +2,7 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
-type StatusType = 
+export type StatusType = 
   | "pending" 
   | "processing" 
   | "shipped" 
@@ -18,12 +18,12 @@ type StatusType =
   | "success";
 
 interface StatusBadgeProps {
-  status: StatusType;
+  status: StatusType | string;
   className?: string;
 }
 
 export function StatusBadge({ status, className }: StatusBadgeProps) {
-  const getStatusStyles = (status: StatusType) => {
+  const getStatusStyles = (status: StatusType | string) => {
     switch (status) {
       case "pending":
         return "bg-yellow-100 text-yellow-800 border-yellow-200";
@@ -51,7 +51,7 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
     }
   };
 
-  const getStatusLabel = (status: StatusType) => {
+  const getStatusLabel = (status: StatusType | string) => {
     switch (status) {
       case "pending":
         return "En attente";
